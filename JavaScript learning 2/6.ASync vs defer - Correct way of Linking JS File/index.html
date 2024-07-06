@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+<body>
+    
+
+</body>
+</html>
+
+ab ham baat krein ge ke ap ko kese link krna ha apni Js file ko apni HTML file ke sath. ab ap log kahen ge ke ya to hamme pata ha. ab ma apko agle 5 10 mint jo btane wala hoon wo important ha aur interview ma is ke baray ma pocha jata ha.
+
+Ma ap ko 3 4 tareeqe btao ga jis se ap apni js file ko HTML file ke sath link kr sakte hen
+
+aur btao ga ke konsa tareeqa acha ha aur kyun acha ha
+
+1. aik tareeqa to ya ha ke ham body tag se upar kuch is tarah likhen <script src = "index.js"></script> ab ma ap ko btao ga ke is tareeqe ma kami kia ha lekin ap log keh rhe hoge ke ya tareeqa to theek ha is ma kami kia ha. 
+
+Ab dehaan se sunna ye HTML file jaye gi browser ke paas. Browser kia kre ga theek ha mujhe HTML file mil gayi is ko parse karta ho. Parse karne ka matlab hota ha browser is ko read kre ga line by line. Browser sari lines check krta jaye ga kahe ga ya line bhi theek ha aur ye bhi ab browser punchay ga <script src = "index.js"></script> is line par. Browser kahe ga ke yaha pa mujhe aik javascript ki file load krni ha. Ab browser is Js file ko load kre ga. yaha pa ap log soch rahe hoge ke load kiya sab theek to ha. Ab yaha pa dehaan dena yaha pa parsing stop hogi matlab browser agay read nhi kar raha meri HTML file. Ab is ko load krne ke baad browser kia kre ga ke load krdi js file ab is ko execute krta hoon jis ka matlab Js file ko line by line run krna lekin browser to ruk chuka tha wo nhi janta ke agay kia hoa ha Js file kahe gi ke agay to kuch likha hi nhi ha beshak hamne agay code likha hua ho to execution ke time pa error a jaye ga 
+
+Matlab ye tareeqa bilkul ghalt ha is ko hamne use nhi karna
+
+2. aik aur tareeqa ha hamare paas ke ham body tag ke end ma <script src = "index.js"></script> ya likh sakhte hen ab is tareeqe ko dekhte hen to wohi kaam start hoga hamara browser kia kahe ga ke sari line to theek hen parsing ke doraan. jab browser puhncha <script src = "index.js"></script> is line par to wo is Js file ko load krne lga. Load krne ke baad ab kahe ga ke mene isay execute krna ha execute bhi ho jaye gi kyunke browser pehle hi sara code parse kar chuka ha matlab js file link karne wali line end ma thi is liye. To ap log soch rahe hoge ke ye tareeqa best ha aj se hamne yahi use karna ha baqi tareeqe gaye bhar ma. Dekhiye is method ma bhi problem ha is ko bhi samjhte hen. Problem ya ha ke file execute ho to jaye gi lekin is ma buht time lage ga pehle HTML parse ho rahi ha phir Js file load ho rahi ha phir Js file execute ho raha ha to is sab ma time lage ga. Ye kaam bari bari ho rahe hen ham ne kuch aisay krna ha ke dono kaam aik sath ho jaye hamare.To 3rd method btata ho ma apko
+
+3. tareeqa bhi itna acha nhi ha lekin is ko samajhna zaruri ha. ab ma wapis se body tag ke upar pehle tareeqe ki tarah likho ga bas async ka izafa kroon ga <script src="index.js" async></script> kuch aise. Ab async attribute kia ha is ko dekhte hen.Ab browser ko HTML file mil gayi browser parsing start kare ga. Parse karne ka matlab read krna ha. Browser ab punche ga <script src="index.js" async></script> pa. Yaha ma browser dekhe ga ke ye async ha mujhe parsing nhi rokni. Ab do step aik sath chalenge parsing bhi hoti rahe gi aur Js file bhi load hoti rahe gi. Farz karo browser agay kisi line ko read kr raha tha abhi pura code read nhi kia tha ke utne ma Js file load hogai to Browser udhar hi parsing roak de ga ya dono kaam load hone tak aik sath ho rahe the lekin ab file load ho chuki ha to parsing ruk jaye gi pehle hi phir code execution pa dehaan hoga browser ka phir error ane ka chance zyada ha kyu ke meri adhi file parse hoi ha. Matlab ya async tareeqa bhi ghalt ha.
+
+ab 4th method ki baat krte hen
+
+4. tareeqa ha ke ham async ki jagah "defer" use krein. Browser ko mile gi HTML aur wo parse karna start karega wo kahe ga ke sari lines theek hen phir wo puhnchey ga <script src="index.js" defer></script> yaha pa. Browser kahe ga defer ko dekh ke parsing to chal rahi ha sath ma Js file ko load krna start krte hen to ye dono kaam hogay aik sath. Aik time aye ga ka loading complete ho jaye gi parsing se pehle to browser kahe ga achi baat ha lekin ma pehle sare code ko parse karo ga. Aur parse karne ke baad code ko execute karega browser to ye best tareeqa ha.
+
+is ma time kese bach raha ha wo dekh lete hen. is ma ya ho raha tha ke parsing aur loading sath ho rahe thay jab loading ho gayi to parsing ruki nhi chalti rhi is tarah kuch time bach jaye ga aur code execute hona start ho jaye ga aur is ma error anay ke chances bhi nhi hen ham agay se isi method ko use krein ge Js file ko link krne ke liye HTML file ke sath.
