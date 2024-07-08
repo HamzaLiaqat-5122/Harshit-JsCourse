@@ -1,10 +1,3 @@
-// get multiple elements using getElements by class name
-// get multiple elements using querySelectorAll
-// console.log(navItems);
-// console.log(Array.isArray(navItems));
-// const navItems = document.querySelectorAll(".nav-item") // NodeList
-
-
 // Iterate Elements
 
 // mujhe kia krna ha ke sari li items ka color green krna ha background white krna ha is ke liye loop chalana parega
