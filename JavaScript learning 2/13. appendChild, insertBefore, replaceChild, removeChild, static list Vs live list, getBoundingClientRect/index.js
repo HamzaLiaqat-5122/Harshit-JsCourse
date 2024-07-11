@@ -5,7 +5,7 @@
 // const ul = document.querySelector(".todo-list");
 // const li = document.createElement("li");
 // li.textContent = "Todo 2";
-// ul.appendChild(li); // so it worked i add Todo 2 at the end of ul
+// ul.appendChild(li); // so it worked i added Todo 2 at the end of ul
 
 // insertBefore
 // const referenceNode = document.querySelector(".first-todo")
